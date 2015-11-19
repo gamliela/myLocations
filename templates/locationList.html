@@ -1,0 +1,17 @@
+<div class="container">
+    <h4 ng-show="(locations.length==0) && !categorized"><small>No Locations</small></h4>
+    <div class="list-group" ng-hide="categorized">
+        <a class="list-group-item" data-ui-sref="root.location.edit({id:location.id})" ng-repeat="location in locations">
+            {{location.name}}
+        </a>
+    </div>
+    <div ng-show="categorized" ng-repeat="category in categories">
+        <label>{{category.name}}</label>
+        <h4 ng-show="category.locations.length==0"><small>No assigned locations</small></h4>
+        <div class="list-group" ng-show="categorized">
+            <a class="list-group-item" data-ui-sref="root.location.edit({id:location.id})" ng-repeat="location in category.locations">
+                {{location.name}}
+            </a>
+        </div>
+    </div>
+</div>

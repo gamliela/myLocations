@@ -1,0 +1,5 @@
+body { padding-bottom: 70px; }
+footer .navbar { padding: 10px 0; }
+footer .navbar a { cursor: pointer; }
+input.error, #categoriesSelect.error button { border-color: #F00; }
+.angular-google-map-container { height: 400px; }

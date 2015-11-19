@@ -1,0 +1,16 @@
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li ng-class="{active:$state.includes('root.category')}">
+                <a ng-click="$state.go('root.category')">
+                    <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Categories
+                </a>
+            </li>
+            <li ng-class="{active:$state.includes('root.location')}">
+                <a ng-click="$state.go('root.location')">
+                    <span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Locations
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

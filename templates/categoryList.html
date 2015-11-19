@@ -1,0 +1,8 @@
+<div class="container">
+    <h4 ng-show="categories.length==0"><small>No Categories</small></h4>
+    <div class="list-group">
+        <a class="list-group-item" data-ui-sref="root.category.edit({id:category.id})" ng-repeat="category in categories">
+            {{category.name}}
+        </a>
+    </div>
+</div>

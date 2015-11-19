@@ -1,0 +1,37 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="nameInput">Location Name</label>
+            <input type="text" class="form-control" ng-class="{error:validation.name}" id="nameInput" ng-model="location.name" placeholder="Value is required" />
+        </div>
+        <div class="form-group">
+            <label for="addressInput">Location Address</label>
+            <input type="text" class="form-control" ng-class="{error:validation.address}" id="addressInput" ng-model="location.address" placeholder="Value is required" />
+
+        </div>
+        <div class="form-group">
+            <label for="categoriesSelect">Location Categories</label>
+            <div
+                    id="categoriesSelect"
+                    data-isteven-multi-select
+                    data-input-model="categoriesSelectInput"
+                    data-output-model="categoriesSelectOutput"
+                    data-button-label="name"
+                    data-item-label="name"
+                    data-tick-property="ticked"
+                    data-helper-elements=""
+                    data-translation="localLang"
+                    ng-class="{error:validation.categories}"
+                    >
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Location Coordinates</label>
+            <ui-gmap-google-map center="mapCenter" zoom="16">
+                <ui-gmap-marker idKey="0" coords="location.coords" options="{draggable: true}">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+            <h4><small>Drag marker to update coordinates</small></h4>
+        </div>
+    </form>
+</div>

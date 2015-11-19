@@ -1,0 +1,10 @@
+<div class="navbar navbar-default navbar-top">
+    <div class="container">
+        <div class="navbar-header">
+            <span class="navbar-brand">{{$state.current.data.toolbarLabel}}</span>
+        </div>
+        <form class="navbar-form navbar-left" ng-repeat="action in $state.current.data.toolbarActions">
+            <button type="button" class="btn btn-default" ng-click="actionClick(action)">{{action.label}}</button>
+        </form>
+    </div>
+</div>

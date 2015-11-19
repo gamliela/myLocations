@@ -1,0 +1,20 @@
+<div class="container">
+    <div ng-show="validation.delete" class="alert alert-danger" role="alert">{{validation.delete}}</div>
+    <form>
+        <div class="form-group">
+            <label for="nameInput">Category Name</label>
+            <input type="text" class="form-control" ng-class="{error:validation.name}" id="nameInput" ng-model="category.name" placeholder="Value is required" />
+        </div>
+        <div class="form-group" ng-switch="locationsFiltered.length > 0">
+            <div ng-switch-when="true">
+                <label for="locationsList">Assigned Locations</label>
+                <div id="locationsList" class="list-group">
+                    <a class="list-group-item" data-ui-sref="root.location.edit({id:location.id})" ng-repeat="location in locationsFiltered">
+                        {{location.name}}
+                    </a>
+                </div>
+            </div>
+            <label ng-switch-default>No Assigned Locations</label>
+        </div>
+    </form>
+</div>

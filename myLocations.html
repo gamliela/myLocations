@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>myLocations</title>
+
+    <!-- Bootstrap core + custom CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/isteven-multi-select.css">
+
+    <!-- Angular + dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-simple-logger.js"></script>
+    <script src="lib/angular-local-storage.js"></script>
+    <script src="lib/isteven-multi-select.js"></script>
+    <script src="lib/angular-google-maps.js"></script>
+
+    <!-- App -->
+    <script src="myLocations.js"></script>
+    <link href="css/myLocations.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- top navbar -->
+<header data-ui-view="top">
+</header>
+
+<!-- messages area -->
+<section data-ui-view="message">
+</section>
+
+<!-- main content -->
+<section data-ui-view="main">
+</section>
+
+<!-- bottom navbar -->
+<footer data-ui-view="bottom">
+</footer>
+
+</body>
+
+</html>
